@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="http://www.dblab.ece.ntua.gr/images/logo.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Georgios Karapidakis">
+    <title>B+ Trees</title>
+  </head>
+  <body>
+    <div id="operations" class="ops">
+      <form id="createBTreeForm">
+        <label for="degree">Degree:</label>
+        <input type="number" id="degree" name="degree" required>
+        <input type="submit" value="Create BTree">
+      </form>
+    
+      <form id="findValueForm">
+        <label for="findValue">Find Value:</label>
+        <input type="number" id="findValue" name="findValue" required>
+        <input type="submit" value="Find Value">
+      </form>
+    
+      <form id="insertValueForm">
+        <label for="insertValue">Insert Value:</label>
+        <input type="number" id="insertValue" name="insertValue" required>
+        <input type="submit" value="Insert Value">
+      </form>
+    
+      <form id="deleteValueForm">
+        <label for="deleteValue">Delete Value:</label>
+        <input type="number" id="deleteValue" name="deleteValue" required>
+        <input type="submit" value="Delete Value">
+      </form>
+
+      <button id="printTreeButton">Print Tree</button>
+      
+      <div id="sliderContainer">
+        <button id="previousTreeButton"></button>
+        <input type="range" min="0" max="0" value="0" class="slider" id="historySlider" style="width: 80%;">
+        <button id="nextTreeButton"></button>
+      </div>
+      <button id="resetButton" style="display: block; margin: auto;">Reset History</button>
+      
+    </div>
+    <div id="tree">
+      <h1 id="message"></h1>
+      <canvas id="treeCanvas"></canvas>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
